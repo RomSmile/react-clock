@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  background: linear-gradient(blue, yellow);
+  //animation: round linear 10s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes round {
+  0% {
+    transform: rotate(36deg) scale(2);
+  }
+  0% {
+    transform: rotate(72deg) scale(1);
+  }
+  0% {
+    transform: rotate(108deg) scale(2);
+  }
+  0% {
+    transform: rotate(144deg) scale(1);
+  }
+  0% {
+    transform: rotate(180deg) scale(2);
+  }
+  0% {
+    transform: rotate(216deg) scale(1);
+  }
+  0% {
+    transform: rotate(252deg) scale(2);
+  }
+  0% {
+    transform: rotate(288deg) scale(2);
+  }
+  0% {
+    transform: rotate(324deg) scale(1);
+  }
+  0% {
+    transform: rotate(250deg) scale(2);
+  }
+  0% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes neround {
+  0% {
+    transform: rotate(-36deg);
+  }
+  0% {
+    transform: rotate(-72deg);
+  }
+  0% {
+    transform: rotate(-108deg);
+  }
+  0% {
+    transform: rotate(-144deg);
+  }
+  0% {
+    transform: rotate(-180deg);
+  }
+  0% {
+    transform: rotate(-216deg);
+  }
+  0% {
+    transform: rotate(-252deg);
+  }
+  0% {
+    transform: rotate(-288deg);
+  }
+  0% {
+    transform: rotate(-324deg);
+  }
+  0% {
+    transform: rotate(-250deg);
+  }
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 100%;
+}
+
+.clock {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: pink;
+  border-radius: 100%;
+  background: url(../images/2.png);
+  background-size: contain;
+  //animation: neround linear 10.1s infinite;
+}
+
+.clock-stick-hour, .clock-stick-minutes, .clock-stick-second {
+  position: absolute;
+  transform-origin: bottom center;
+}
+
+.clock-stick-hour {
+  top: 25.1%;
+  left: 47.5%;
+  height: 100px;
+  background-color: blue;
+  width: 15px;
+  z-index: 3;
+}
+
+.clock-stick-minutes {
+  top: 12.6%;
+  left: 48.87%;
+  height: 150px;
+  background-color: yellow;
+  width: 10px;
+  z-index: 2;
+}
+
+.clock-stick-second {
+  top: 3%;
+  left: 49.5%;
+  height: 190px;
+  background-color: red;
+  width: 5px;
+  z-index: 1;
+}
